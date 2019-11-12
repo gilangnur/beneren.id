@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
   
   
 import styled from 'styled-components';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser, faLock } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser, faLock, faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import Button from '../components/Button';
 
 import '../../node_modules/bulma/css/bulma.css';
@@ -31,10 +31,16 @@ const StyledColumn = styled.div`
     `
 
 const StyledIllustration = styled.img `
+        cursor: pointer;
         margin-left: 20vw;
         width: auto;
         height: 320px;
     `
+
+const StyledIconButton = styled.span `
+        cursor: pointer;
+        pointer-events: auto !important;
+    `    
 
 class HomePage extends Component {
     constructor (props) {
@@ -45,8 +51,20 @@ class HomePage extends Component {
             formErrors: {email: '', password: ''},
             emailValid: false,
             passwordValid: false,
-            formValid: false
+            formValid: false,
+            type: 'password',
+            iconType: false
         }
+    }
+
+    showHide = (e) => {
+        console.log(this.state.iconType);
+        e.preventDefault();
+        e.stopPropagation();
+        this.setState({
+            type: this.state.type === 'input' ? 'password' : 'input',
+            iconType: this.state.iconType === false ? true : false
+        })  
     }
 
     handleUserInput = (e) => {
@@ -113,11 +131,14 @@ class HomePage extends Component {
                             </div>
                             <div className="field">
                                 <label className="label">Password</label>
-                                <div className="control has-icons-left">
-                                    <input className={`input ${this.errorClass(this.state.formErrors.password)}`} type="password" name="password" placeholder="Secretly password" value={this.state.password} onChange={this.handleUserInput}/>
+                                <div className="control has-icons-left has-icons-right">
+                                    <input className={`input ${this.errorClass(this.state.formErrors.password)}`} type={this.state.type} name="password" placeholder="Secretly password" value={this.state.password} onChange={this.handleUserInput}/>
                                     <span className="icon is-small is-left">
                                         <FontAwesomeIcon icon={faLock}/>
                                     </span>
+                                    <StyledIconButton className="icon is-small is-right" onClick={this.showHide}>
+                                        <FontAwesomeIcon icon={this.state.iconType ? faEyeSlash : faEye}/>
+                                    </StyledIconButton>
                                 </div>
                                 <p id="email-message" className="help is-danger">{this.state.formErrors.password}</p>
                             </div>
@@ -137,7 +158,7 @@ class HomePage extends Component {
                     </StyledColumn>
                     <div className="column">
                         <figure>
-                            <StyledIllustration src={Illustration}/>
+                            <StyledIllustration src={Illustration} onClick={this.showHide}/>
                         </figure>
                     </div>
                 </div>
