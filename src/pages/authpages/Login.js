@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
   
-  
 import styled from 'styled-components';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faLock, faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
-import Button from '../components/Button';
+import Button from '../../components/Button';
 
-import '../../node_modules/bulma/css/bulma.css';
-import Logo from '../assets/images/logo.png';
-import Illustration from '../assets/images/hero@2x.png';
+import '../../../node_modules/bulma/css/bulma.css';
+import Logo from '../../assets/images/logo.png';
+import Illustration from '../../assets/images/hero@2x.png';
 
 const StyledWrapper = styled.div`
         padding: 10vh 5vw;

@@ -1,7 +1,7 @@
 import React, { Component }  from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import Login from './pages/Login';
+import Login from './pages/authpages/Login';
 
 class App extends Component {
   constructor(props) {
