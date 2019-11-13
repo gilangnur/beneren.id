@@ -5,6 +5,8 @@ import Login from './pages/authpages/Login';
 import Register from './pages/authpages/Register';
 import ForgotPassword from './pages/authpages/ForgotPassword';
 
+import Home from './pages/mainpage/Home';
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -20,6 +22,9 @@ class App extends Component {
           <Route path="/login" component={Login} exact />
           <Route path="/register" component={Register} exact />   
           <Route path="/forgotpassword" component={ForgotPassword} exact/>   
+        </Switch>
+        <Switch>
+          <Route path="/" component={Home} exact />
         </Switch>
     </Router>
     );
