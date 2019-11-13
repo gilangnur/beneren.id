@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
   
-  
 import styled from 'styled-components';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faLock, faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
-import Button from '../components/Button';
+import Button from '../../components/Button';
 
-import '../../node_modules/bulma/css/bulma.css';
-import Logo from '../assets/images/logo.png';
-import Illustration from '../assets/images/hero@2x.png';
+import '../../../node_modules/bulma/css/bulma.css';
+import Logo from '../../assets/images/logo.png';
+import Illustration from '../../assets/images/hero@2x.png';
 
 const StyledWrapper = styled.div`
         padding: 10vh 5vw;
@@ -71,8 +70,8 @@ class HomePage extends Component {
         const name = e.target.name;
         const value = e.target.value;
         this.setState({[name]: value},
-                      () => { this.validateField(name, value) });
-      }
+            () => { this.validateField(name, value) });
+    }
 
     validateField(fieldName, value) {
         let fieldValidationErrors = this.state.formErrors;
@@ -95,7 +94,7 @@ class HomePage extends Component {
                         emailValid: emailValid,
                         passwordValid: passwordValid
                         }, this.validateForm);
-        }
+    }
     
     validateForm() {
         this.setState({formValid: this.state.emailValid && this.state.passwordValid});
@@ -127,7 +126,7 @@ class HomePage extends Component {
                                         <FontAwesomeIcon icon={faUser}/>
                                     </span>
                                 </div>
-                                <p id="email-message" className="help is-danger">{this.state.formErrors.email}</p>
+                                <p className="help is-danger">{this.state.formErrors.email}</p>
                             </div>
                             <div className="field">
                                 <label className="label">Password</label>
@@ -147,7 +146,7 @@ class HomePage extends Component {
                             </div>
                             <div className="columns is-1">
                                 <div className="column">
-                                    <Link to="/forgot-password">Forgot Password?</Link>
+                                    <Link to="/forgotpassword">Forgot Password?</Link>
                                 </div>
                                 <div className="column">
                                     Create account?<Link to="/register">Register</Link>
