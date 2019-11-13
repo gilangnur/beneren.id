@@ -70,8 +70,8 @@ class HomePage extends Component {
         const name = e.target.name;
         const value = e.target.value;
         this.setState({[name]: value},
-                      () => { this.validateField(name, value) });
-      }
+            () => { this.validateField(name, value) });
+    }
 
     validateField(fieldName, value) {
         let fieldValidationErrors = this.state.formErrors;
@@ -94,7 +94,7 @@ class HomePage extends Component {
                         emailValid: emailValid,
                         passwordValid: passwordValid
                         }, this.validateForm);
-        }
+    }
     
     validateForm() {
         this.setState({formValid: this.state.emailValid && this.state.passwordValid});
@@ -126,7 +126,7 @@ class HomePage extends Component {
                                         <FontAwesomeIcon icon={faUser}/>
                                     </span>
                                 </div>
-                                <p id="email-message" className="help is-danger">{this.state.formErrors.email}</p>
+                                <p className="help is-danger">{this.state.formErrors.email}</p>
                             </div>
                             <div className="field">
                                 <label className="label">Password</label>
@@ -146,7 +146,7 @@ class HomePage extends Component {
                             </div>
                             <div className="columns is-1">
                                 <div className="column">
-                                    <Link to="/forgot-password">Forgot Password?</Link>
+                                    <Link to="/forgotpassword">Forgot Password?</Link>
                                 </div>
                                 <div className="column">
                                     Create account?<Link to="/register">Register</Link>

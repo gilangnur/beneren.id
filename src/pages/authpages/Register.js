@@ -10,7 +10,6 @@ import Button from '../../components/Button';
 import '../../../node_modules/bulma/css/bulma.css';
 import Logo from '../../assets/images/logo.png';
 import Illustration from '../../assets/images/undraw_to_do_list_a49b@2x.png';
-import { isNull } from 'util';
 
 const StyledWrapper = styled.div`
         padding: 10vh 5vw;
