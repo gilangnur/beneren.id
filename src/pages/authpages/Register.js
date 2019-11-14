@@ -178,7 +178,7 @@ class Register extends Component {
                                 <p className="help is-danger"></p>
                             </div>
                             <div className="field">
-                                <Button type="submit" style="button is-primary is-normal is-fullwidth" text="REGISTER"/>
+                                <Button type="submit" style="button is-info is-normal is-fullwidth" text="REGISTER"/>
                             </div>
                         </StyledForm>
                     </StyledColumn>

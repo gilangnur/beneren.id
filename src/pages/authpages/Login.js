@@ -142,7 +142,7 @@ class HomePage extends Component {
                                 <p id="email-message" className="help is-danger">{this.state.formErrors.password}</p>
                             </div>
                             <div className="field">
-                                <Button type="submit" style="button is-primary is-normal is-fullwidth" disabled={!this.state.formValid} text="LOGIN"/>
+                                <Button type="submit" style="button is-info is-normal is-fullwidth" disabled={!this.state.formValid} text="LOGIN"/>
                             </div>
                             <div className="columns is-1">
                                 <div className="column">

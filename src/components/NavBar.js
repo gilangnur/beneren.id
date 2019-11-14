@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import styled from 'styled-components';
 import Button from '../components/Button';
 
 import '../../node_modules/bulma/css/bulma.css';
@@ -24,9 +23,12 @@ class Navbar extends Component {
                             <Link to="/laporkan" className="navbar-item">
                                 Laporkan Penipuan
                             </Link>
+                            <Link to="/laporkan" className="navbar-item">
+                                Cek Rekening
+                            </Link>
                             <div className="navbar-item">
                                 <Link to="/login">
-                                    <Button style="button is-primary" text="LOGIN"/>
+                                    <Button style="button is-info" text="LOGIN"/>
                                 </Link>
                             </div>
                             <div className="navbar-item">

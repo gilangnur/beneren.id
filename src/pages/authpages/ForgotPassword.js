@@ -46,7 +46,7 @@ class ForgotPassword extends Component {
                             </span>
                         </div>
                     </div>
-                    <Button type="submit" style="button is-primary is-normal is-fullwidth" text="RESET ACCOUNT"/> 
+                    <Button type="submit" style="button is-info is-normal is-fullwidth" text="RESET ACCOUNT"/> 
                 </form>
             </StyledWrapper>
         );
