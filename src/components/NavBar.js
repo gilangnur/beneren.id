@@ -23,17 +23,17 @@ class Navbar extends Component {
                             <Link to="/laporkan" className="navbar-item">
                                 Laporkan Penipuan
                             </Link>
-                            <Link to="/laporkan" className="navbar-item">
+                            <Link to="/cekrekening" className="navbar-item">
                                 Cek Rekening
                             </Link>
                             <div className="navbar-item">
                                 <Link to="/login">
-                                    <Button style="button is-info" text="LOGIN"/>
+                                    <Button style="button is-info" text="login"/>
                                 </Link>
                             </div>
                             <div className="navbar-item">
                                 <Link to="/register">
-                                    <Button style="button is-light" text="REGISTER"/>
+                                    <Button style="button is-light" text="daftar"/>
                                 </Link>    
                             </div>
                         </div>

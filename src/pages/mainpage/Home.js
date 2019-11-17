@@ -58,7 +58,7 @@ class Home extends Component {
                                             </span>
                                         </p>
                                         <p className="control">
-                                            <Button type="submit" style="button is-light is-medium" text="CHECK" />
+                                            <Button type="submit" style="button is-light is-medium" text="check" />
                                         </p>
                                     </div>
                                 </form>
@@ -118,7 +118,7 @@ class Home extends Component {
                                         saya lakukan aman.
                                     </p>
                                     <Link to="/cekrekening">
-                                        <Button style="button is-info" text="CEK RESIKO"/>
+                                        <Button style="button is-info" text="risk check"/>
                                     </Link>
                                 </div>
                                 <div className="column is-4">
@@ -131,7 +131,7 @@ class Home extends Component {
                                         agar tak terulang hal yang sama
                                     </p>
                                     <Link to="/laporkan">
-                                        <Button style="button is-info" text="LAPORKAN PENIPUAN"/>
+                                        <Button style="button is-info" text="report scam"/>
                                     </Link>
                                 </div>
                             </div>

@@ -6,6 +6,7 @@ import Register from './pages/authpages/Register';
 import ForgotPassword from './pages/authpages/ForgotPassword';
 
 import Home from './pages/mainpage/Home';
+import CekRekening from './pages/rekening/CekRekening';
 
 class App extends Component {
   constructor(props) {
@@ -25,6 +26,7 @@ class App extends Component {
         </Switch>
         <Switch>
           <Route path="/" component={Home} exact />
+          <Route path="/cekrekening" component={CekRekening} exact />
         </Switch>
     </Router>
     );
