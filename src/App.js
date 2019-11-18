@@ -7,6 +7,7 @@ import ForgotPassword from './pages/authpages/ForgotPassword';
 
 import Home from './pages/mainpage/Home';
 import CekRekening from './pages/rekening/CekRekening';
+import ReportForm from './pages/rekening/ReportForm'
 
 class App extends Component {
   constructor(props) {
@@ -27,6 +28,7 @@ class App extends Component {
         <Switch>
           <Route path="/" component={Home} exact />
           <Route path="/cekrekening" component={CekRekening} exact />
+          <Route path="/laporkan" component={ReportForm} exact />
         </Switch>
     </Router>
     );
