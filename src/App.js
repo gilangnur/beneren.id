@@ -8,15 +8,9 @@ import ForgotPassword from './pages/authpages/ForgotPassword';
 import Home from './pages/mainpage/Home';
 import CekRekening from './pages/rekening/CekRekening';
 import ReportForm from './pages/rekening/ReportForm'
+import DetailedRekening from './pages/rekening/DetailedRekening';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      navbar: true
-    }
-  }
-
   render(){
     return(
       <Router>
@@ -29,6 +23,7 @@ class App extends Component {
           <Route path="/" component={Home} exact />
           <Route path="/cekrekening" component={CekRekening} exact />
           <Route path="/laporkan" component={ReportForm} exact />
+          <Route path="/detailedRekening" component={DetailedRekening} exact/>
         </Switch>
     </Router>
     );

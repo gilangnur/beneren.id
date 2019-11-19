@@ -22,6 +22,7 @@ const StyledSection = styled.div`
 
 
 class ReportForm extends Component {
+
     render() {
         return (
             <div>
@@ -169,7 +170,7 @@ class ReportForm extends Component {
                                                 </span>
                                             </span>
                                             <span className="file-name">
-                                                Upload your evidence pic ...
+                                                Upload your evidence pic npm install --save react-redux...
                                             </span>
                                         </label>
                                     </div>
